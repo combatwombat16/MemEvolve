@@ -107,6 +107,16 @@ DEFAULT_CONFIG = {
             "max_neg_examples": 1,
             "prune_threshold": 0.3,
         },
+        MemoryType.GOOGLE_MEMORY_BANK: {
+            "project_id": os.environ.get("GOOGLE_CLOUD_PROJECT", ""),
+            "location": os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1"),
+            "engine_name": os.environ.get("MEMORY_BANK_ENGINE_NAME", ""),
+            "scope_key": "agent_id",
+            "scope_value": "memevolve_agent",
+            "top_k": 3,
+            "enable_consolidation": True,
+            "storage_dir": os.path.join(STORAGE_BASE_DIR, "google_memory_bank"),
+        },
         # add new memory type upside this line
 }
 }

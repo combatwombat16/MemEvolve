@@ -36,6 +36,7 @@ class MemoryType(Enum):
     DYNAMIC_CHEATSHEET = "dynamic_cheatsheet"
     AGENT_WORKFLOW_MEMORY = "agent_workflow_memory"
     EVOLVER = "evolver"
+    GOOGLE_MEMORY_BANK = "google_memory_bank"
 # add new memory type upside this line(Enum)
 
 # Provider mapping for dynamic loading
@@ -59,6 +60,7 @@ PROVIDER_MAPPING = {
     MemoryType.DYNAMIC_CHEATSHEET:("DynamicCheatsheetProvider","dynamic_cheatsheet_provider"),
     MemoryType.AGENT_WORKFLOW_MEMORY: ("AgentWorkflowMemoryProvider", "agent_workflow_memory_provider"),
     MemoryType.EVOLVER: ("EvolverMemoryProvider", "evolver_memory_provider"),
+    MemoryType.GOOGLE_MEMORY_BANK: ("GoogleMemoryBankProvider", "google_memory_bank_provider"),
 # add new memory type upside this line(PROVIDER_MAPPING)
 }
 
